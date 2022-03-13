@@ -1,0 +1,163 @@
+/* import fonts */
+@font-face {
+    font-family: TheNautigal-Bold;
+    src: url(../Fonts/TheNautigal-Bold.ttf);
+}
+@font-face {
+    font-family: LuxuriousRoman-Regular;
+    src: url(../Fonts/LuxuriousRoman-Regular.ttf);
+}
+@font-face {
+    font-family: IslandMoments-Regular;
+    src: url(../Fonts/IslandMoments-Regular.ttf);
+}
+/* login page styles */
+.login__overlay{
+    position:fixed;
+    display:flex;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(228, 217, 217, 0.8);
+    z-index:2;
+    align-items:center;
+    justify-content:center;
+}
+.login__container{
+    display:flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    align-items: center;
+    background-color: #fff;
+    width:300px;
+    height:fit-content;
+    border-radius: 5px;
+    padding:20px;
+}
+.outer__container{
+    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548);
+    border-radius:10px;
+}
+.login__logo{
+    margin-top:20px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    width:100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login__container > h1{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.login__container > form{
+    width: 80%;
+}
+.login__container > form > h5{
+    margin-bottom:5px;
+}
+
+.login__container > form > input{
+    height:30px;
+    /* margin-bottom: 10px; */
+    background-color: #fff;
+    width:98%;
+    border-radius:5px;
+}
+
+.login__container > p {
+    margin-top:15px;
+    font-size: 12px
+    ;
+}
+.login__signInButton{
+    background:#f0c14b;
+    border-radius: 5px;
+    width:100%;
+    height: 30px;
+    border:1px solid;
+    border-color:#a88734 #9c7e31 #846a29;
+    color:#111;
+    margin-top:10px;
+    cursor:pointer;
+}
+.disabled__login__signInButton{
+    background:#c0bbae;
+    border-radius: 5px;
+    width:100%;
+    height: 30px;
+    border:1px solid;
+    border-color:#a88734 #9c7e31 #846a29;
+    color:#111;
+    margin-top:10px;
+}
+.login__registerButton{
+    border-radius: 5px;
+    width:100%;
+    height: 30px;
+    border:1px solid;
+    margin-top:10px;
+    border-color:darkgrey;
+    cursor:pointer;
+}
+/* cancel button styles */
+.login__container__cancel{
+    position:relative;
+    margin-top:-480px;
+    background-color:rgba(228, 217, 217, 0.5);
+    border:none;
+}
+.disabled__login__container__cancel{
+    position:relative;
+    margin-top:-650px;
+    background-color:rgba(228, 217, 217, 0.5);
+    border:none;
+}
+.login__container__cancel:hover{
+    background-color:hsla(44, 88%, 49%, 0.5);
+    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
+}
+.disabled__login__container__cancel:hover{
+    background-color:hsla(44, 88%, 49%, 0.5);
+    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
+}
+.login__input__header{
+    color:hsla(43, 28%, 31%, 0.212);
+    font-family:"LuxuriousRoman-Regular";
+}
+.login__header h1{
+    color:hsla(44, 49%, 52%, 0.5);
+    font-family:"TheNautigal-Bold";
+    margin-bottom:10px
+}
+.login__terms{
+    font-family:"IslandMoments-Regular";
+    margin-top:10px;
+    color:rgba(71, 60, 60, 0.87);
+    font-size:20px;
+}
+
+.login__signInButton:hover{
+    color:white;
+    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
+}
+.login__registerButton:hover{
+    color:#f0c14b;
+    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
+}
+.sign__in__terms{
+    display:flex;
+    align-items:left;
+}
+.sign__in__terms > input{
+    margin:5px
+}
+.login__input__error{
+    color: rgba(223, 132, 132, 0.548);
+    font-family:"LuxuriousRoman-Regular";
+    margin-bottom: 20px;
+}

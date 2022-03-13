@@ -1,0 +1,6 @@
+{
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "material-icon-theme.activeIconPack": "react",
+    "workbench.iconTheme": "vscode-icons"
+}

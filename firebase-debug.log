@@ -1,0 +1,275 @@
+[debug] [2022-03-13T18:41:26.340Z] ----------------------------------------------------------------------
+[debug] [2022-03-13T18:41:26.345Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SILVER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-03-13T18:41:26.346Z] CLI Version:   10.2.2
+[debug] [2022-03-13T18:41:26.346Z] Platform:      win32
+[debug] [2022-03-13T18:41:26.347Z] Node Version:  v17.4.0
+[debug] [2022-03-13T18:41:26.358Z] Time:          Sun Mar 13 2022 19:41:26 GMT+0100 (West Africa Standard Time)
+[debug] [2022-03-13T18:41:26.359Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-13T18:41:26.596Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-13T18:41:26.597Z] > authorizing via signed-in user (yemisi3385@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project clone-2bf0a. This may result in unexpected behavior. 
+[debug] [2022-03-13T18:41:26.973Z] [hub] writing locator at C:\Users\SILVER\AppData\Local\Temp\hub-clone-2bf0a.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[warn] !  Your requested "node" version "16" doesn't match your global version "17". Using node@17 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"17\". Using node@17 from host."}}
+[debug] [2022-03-13T18:41:27.059Z] defaultcredentials: writing to file C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json
+[debug] [2022-03-13T18:41:27.062Z] Setting GAC to C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\SILVER\\AppData\\Roaming\\firebase\\yemisi3385_gmail_com_application_default_credentials.json"}}
+[debug] [2022-03-13T18:41:27.066Z] > refreshing access token with scopes: []
+[debug] [2022-03-13T18:41:27.072Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-13T18:41:27.810Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 13 Mar 2022 18:41:33 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-13T18:41:27.842Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig [none]
+[debug] [2022-03-13T18:41:28.576Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig 200
+[debug] [2022-03-13T18:41:28.576Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig {"projectId":"clone-2bf0a","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3"}
+[debug] [2022-03-13T18:41:28.607Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 
+[debug] [2022-03-13T18:41:30.273Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 200
+[debug] [2022-03-13T18:41:30.274Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites {"sites":[{"name":"projects/582926062597/sites/clone-2bf0a","defaultUrl":"https://clone-2bf0a.web.app","appId":"1:582926062597:web:8d42b19147ecb14977f86c","type":"DEFAULT_SITE"}]}
+[debug] [2022-03-13T18:41:30.274Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config [none]
+[debug] [2022-03-13T18:41:31.455Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config 200
+[debug] [2022-03-13T18:41:31.456Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config {"projectId":"clone-2bf0a","appId":"1:582926062597:web:8d42b19147ecb14977f86c","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3","apiKey":"AIzaSyCcAhTdRlTbbbXZ3JpWLXkSh9zEOhr-4Ds","authDomain":"clone-2bf0a.firebaseapp.com","messagingSenderId":"582926062597","measurementId":"G-GTK0BLZHZK"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting: Local server: http://0.0.0.0:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://0.0.0.0:5000\u001b[22m\u001b[24m"}}
+[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
+[debug] [2022-03-13T18:41:31.577Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-13T18:41:31.578Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-13T18:41:31.578Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\SILVER\\.cache\\firebase\\emulators\\ui-v1.6.5\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\SILVER\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.5\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-03-13T18:41:31.865Z] Web / API server started at localhost:4001
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4001\n"}}
+[info] i  functions: Watching "C:\PROJECTS\amazon-clone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\PROJECTS\\amazon-clone\\functions\" for Cloud Functions..."}}
+[debug] [2022-03-13T18:41:31.879Z] Validating nodejs source
+[debug] [2022-03-13T18:41:38.226Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^8.207.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-13T18:41:38.227Z] Building nodejs source
+[debug] [2022-03-13T18:41:38.227Z] Analyzing nodejs backend spec
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5001/clone-2bf0a/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/clone-2bf0a/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4001                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4001/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 0.0.0.0:5000   │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-03-13T19:35:19.995Z] Received signal SIGHUP 1
+[debug] [2022-03-13T19:36:13.441Z] ----------------------------------------------------------------------
+[debug] [2022-03-13T19:36:13.444Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SILVER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-03-13T19:36:13.445Z] CLI Version:   10.2.2
+[debug] [2022-03-13T19:36:13.445Z] Platform:      win32
+[debug] [2022-03-13T19:36:13.445Z] Node Version:  v17.4.0
+[debug] [2022-03-13T19:36:13.459Z] Time:          Sun Mar 13 2022 20:36:13 GMT+0100 (West Africa Standard Time)
+[debug] [2022-03-13T19:36:13.460Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-13T19:36:13.638Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-13T19:36:13.639Z] > authorizing via signed-in user (yemisi3385@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project clone-2bf0a. This may result in unexpected behavior. 
+[debug] [2022-03-13T19:36:14.328Z] [hub] writing locator at C:\Users\SILVER\AppData\Local\Temp\hub-clone-2bf0a.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[warn] !  Your requested "node" version "16" doesn't match your global version "17". Using node@17 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"17\". Using node@17 from host."}}
+[debug] [2022-03-13T19:36:14.468Z] defaultcredentials: writing to file C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json
+[debug] [2022-03-13T19:36:14.492Z] Setting GAC to C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\SILVER\\AppData\\Roaming\\firebase\\yemisi3385_gmail_com_application_default_credentials.json"}}
+[debug] [2022-03-13T19:36:14.496Z] > refreshing access token with scopes: []
+[debug] [2022-03-13T19:36:14.497Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-13T19:36:16.823Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 13 Mar 2022 19:36:22 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-13T19:36:16.841Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig [none]
+[debug] [2022-03-13T19:36:19.596Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig 200
+[debug] [2022-03-13T19:36:19.596Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig {"projectId":"clone-2bf0a","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3"}
+[debug] [2022-03-13T19:36:19.620Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 
+[debug] [2022-03-13T19:36:21.330Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 200
+[debug] [2022-03-13T19:36:21.330Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites {"sites":[{"name":"projects/582926062597/sites/clone-2bf0a","defaultUrl":"https://clone-2bf0a.web.app","appId":"1:582926062597:web:8d42b19147ecb14977f86c","type":"DEFAULT_SITE"}]}
+[debug] [2022-03-13T19:36:21.331Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config [none]
+[debug] [2022-03-13T19:36:22.467Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config 200
+[debug] [2022-03-13T19:36:22.467Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config {"projectId":"clone-2bf0a","appId":"1:582926062597:web:8d42b19147ecb14977f86c","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3","apiKey":"AIzaSyCcAhTdRlTbbbXZ3JpWLXkSh9zEOhr-4Ds","authDomain":"clone-2bf0a.firebaseapp.com","messagingSenderId":"582926062597","measurementId":"G-GTK0BLZHZK"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting: Local server: http://0.0.0.0:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://0.0.0.0:5000\u001b[22m\u001b[24m"}}
+[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4002 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4002 instead."}}
+[debug] [2022-03-13T19:36:22.655Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-13T19:36:22.656Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-13T19:36:22.657Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\SILVER\\.cache\\firebase\\emulators\\ui-v1.6.5\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\SILVER\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.5\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-03-13T19:36:23.129Z] Web / API server started at localhost:4002
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4002\n"}}
+[info] i  functions: Watching "C:\PROJECTS\amazon-clone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\PROJECTS\\amazon-clone\\functions\" for Cloud Functions..."}}
+[debug] [2022-03-13T19:36:23.226Z] Validating nodejs source
+[debug] [2022-03-13T19:36:37.952Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^8.207.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-13T19:36:37.953Z] Building nodejs source
+[debug] [2022-03-13T19:36:37.954Z] Analyzing nodejs backend spec
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5001/clone-2bf0a/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/clone-2bf0a/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4002                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4002/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 0.0.0.0:5000   │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-03-13T20:58:24.699Z] Received signal SIGHUP 1
+[debug] [2022-03-13T21:03:41.370Z] ----------------------------------------------------------------------
+[debug] [2022-03-13T21:03:41.373Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SILVER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-03-13T21:03:41.374Z] CLI Version:   10.2.2
+[debug] [2022-03-13T21:03:41.374Z] Platform:      win32
+[debug] [2022-03-13T21:03:41.374Z] Node Version:  v17.4.0
+[debug] [2022-03-13T21:03:41.385Z] Time:          Sun Mar 13 2022 22:03:41 GMT+0100 (West Africa Standard Time)
+[debug] [2022-03-13T21:03:41.386Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-13T21:03:41.540Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-13T21:03:41.541Z] > authorizing via signed-in user (yemisi3385@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project clone-2bf0a. This may result in unexpected behavior. 
+[debug] [2022-03-13T21:03:41.869Z] [hub] writing locator at C:\Users\SILVER\AppData\Local\Temp\hub-clone-2bf0a.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[warn] !  Your requested "node" version "16" doesn't match your global version "17". Using node@17 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"17\". Using node@17 from host."}}
+[debug] [2022-03-13T21:03:42.043Z] defaultcredentials: writing to file C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json
+[debug] [2022-03-13T21:03:42.053Z] Setting GAC to C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\SILVER\\AppData\\Roaming\\firebase\\yemisi3385_gmail_com_application_default_credentials.json"}}
+[debug] [2022-03-13T21:03:42.057Z] > refreshing access token with scopes: []
+[debug] [2022-03-13T21:03:42.058Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-13T21:03:42.972Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 13 Mar 2022 21:03:42 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-13T21:03:42.989Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig [none]
+[debug] [2022-03-13T21:03:43.506Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig 200
+[debug] [2022-03-13T21:03:43.506Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig {"projectId":"clone-2bf0a","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3"}
+[debug] [2022-03-13T21:03:43.535Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 
+[debug] [2022-03-13T21:03:45.138Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 200
+[debug] [2022-03-13T21:03:45.138Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites {"sites":[{"name":"projects/582926062597/sites/clone-2bf0a","defaultUrl":"https://clone-2bf0a.web.app","appId":"1:582926062597:web:8d42b19147ecb14977f86c","type":"DEFAULT_SITE"}]}
+[debug] [2022-03-13T21:03:45.139Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config [none]
+[debug] [2022-03-13T21:03:46.181Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config 200
+[debug] [2022-03-13T21:03:46.181Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config {"projectId":"clone-2bf0a","appId":"1:582926062597:web:8d42b19147ecb14977f86c","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3","apiKey":"AIzaSyCcAhTdRlTbbbXZ3JpWLXkSh9zEOhr-4Ds","authDomain":"clone-2bf0a.firebaseapp.com","messagingSenderId":"582926062597","measurementId":"G-GTK0BLZHZK"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting: Local server: http://0.0.0.0:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://0.0.0.0:5000\u001b[22m\u001b[24m"}}
+[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4003 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4003 instead."}}
+[debug] [2022-03-13T21:03:46.332Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-13T21:03:46.333Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-13T21:03:46.333Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\SILVER\\.cache\\firebase\\emulators\\ui-v1.6.5\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\SILVER\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.5\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-03-13T21:03:46.627Z] Web / API server started at localhost:4003
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4003\n"}}
+[info] i  functions: Watching "C:\PROJECTS\amazon-clone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\PROJECTS\\amazon-clone\\functions\" for Cloud Functions..."}}
+[debug] [2022-03-13T21:03:46.657Z] Validating nodejs source
+[debug] [2022-03-13T21:04:00.522Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^8.207.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-13T21:04:00.529Z] Building nodejs source
+[debug] [2022-03-13T21:04:00.530Z] Analyzing nodejs backend spec
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5001/clone-2bf0a/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/clone-2bf0a/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4003                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4003/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 0.0.0.0:5000   │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
