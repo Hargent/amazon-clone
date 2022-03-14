@@ -68,6 +68,10 @@
     width:98%;
     border-radius:5px;
 }
+.login__container > form > input:invalid, 
+.login__container > form > input:blank{
+    border-color:red
+}
 
 .login__container > p {
     margin-top:15px;

@@ -20,11 +20,11 @@
     background-color: #fff;
     width:300px;
     /* height:fit-content; */
-    border-radius: 5px;
+    border-radius: 10px;
     }
 .outer__container{
     box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548);
-    border-radius:10px;
+    border-radius:12px;
 }
 .delivery__container__title {
     background-color:white;
@@ -35,12 +35,13 @@
     padding-right: 0px;
     vertical-align: middle;
     align-self: flex-end;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;    
     border-bottom: 1px solid #cdcdcd;
     border-bottom-color: rgba(0,0,0,.2);
+    background-color:rgba(228, 217, 217, 0.8)
     
 }
 .delivery__container__title > p{
@@ -55,4 +56,47 @@
 .delivery__container__cancel:hover{
     background-color:hsla(44, 88%, 49%, 0.5);
     box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
+}
+.delivery__container__content__divider__container{
+    border-top: 2px solid #cdcdcd;
+    display:flex;
+    flex-direction:row;
+    text-align:center;
+}
+.delivery__container__content__divider{
+    display:inline;
+    width:fit-content;
+    text-align:center;
+    margin-top:  -10px;
+    color:rgba(102, 92, 92, 0.5);
+    margin-left:25%;
+    padding:5px;
+    padding-top:0;
+    background-color:white;
+}
+.delivery__container__content__divider__two{
+    display:inline;
+    width:fit-content;
+    text-align:center;
+    margin-top:  -10px;
+    color:rgba(102, 92, 92, 0.5);
+    margin-left:40%;
+    padding:5px;
+    padding-top:0;
+    background-color:white;
+}
+.delivery__container__content__zip__content{
+    padding:20px;
+    display:flex;
+    flex-direction:row;
+}
+.delivery__container__zip__content__input{
+    margin:10px;
+    border:1px solid rgb(63, 62, 62);
+    border-radius:5px;
+}
+.delivery__container__zip__content__input:hover,
+.delivery__container__zip__content__input:active,
+.delivery__container__zip__content__input:disabled{
+    border:1px solid rgb(103, 190, 219);
 }
