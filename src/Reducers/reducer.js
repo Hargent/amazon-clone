@@ -1,6 +1,7 @@
 export const initialState={
     basket:[],
     user:null,
+    country:null
 };
 
 //Selector
@@ -39,6 +40,11 @@ const reducer = (state,action) => {
                 ...state,
                 basket:[]
             }
+        case 'SET_LOCATION':
+        return{
+            ...state,
+            country:action.location
+        }
 
         default:
             return state
