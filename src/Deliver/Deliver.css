@@ -7,7 +7,7 @@
     left:0;
     right:0;
     bottom:0;
-    background-color:rgba(228, 217, 217, 0.8);
+    background-color:rgba(112, 104, 104, 0.336);
     z-index:2;
     align-items:center;
     justify-content:center;
@@ -18,7 +18,7 @@
     height: 50vh;
     align-items: center;
     background-color: #fff;
-    width:300px;
+    width:400px;
     /* height:fit-content; */
     border-radius: 10px;
     }
@@ -27,7 +27,7 @@
     border-radius:12px;
 }
 .delivery__container__title {
-    background-color:white;
+    background-color:#f2f2f2;;
     width:100%;
     text-align:left;
     /* height:20%; */
@@ -41,11 +41,12 @@
     border-bottom-left-radius: 0px;    
     border-bottom: 1px solid #cdcdcd;
     border-bottom-color: rgba(0,0,0,.2);
-    background-color:rgba(228, 217, 217, 0.8)
+    /* background-color:rgba(228, 217, 217, 0.8) */
     
 }
 .delivery__container__title > p{
     padding-left:20px;
+    font-weight:bold;
 }
 .delivery__container__cancel{
     position:relative;
@@ -58,10 +59,12 @@
     box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
 }
 .delivery__container__content__divider__container{
-    border-top: 2px solid #cdcdcd;
+    border-top: 1px solid #cdcdcd41;
     display:flex;
     flex-direction:row;
     text-align:center;
+    margin-left:20px;
+    margin-right:20px;
 }
 .delivery__container__content__divider{
     display:inline;
@@ -73,6 +76,7 @@
     padding:5px;
     padding-top:0;
     background-color:white;
+    
 }
 .delivery__container__content__divider__two{
     display:inline;
@@ -113,12 +117,30 @@
 }
 .delivery__container__content__header1{
     margin :20px;
-    color:rgb(119, 113, 113)
+    margin-top:30px;
+    margin-bottom:30px;
+    color: #0f111188;
+    font-size:12px;
+    font-weight:small;
 }
 .delivery__container__content__header2{
     margin:20px;
-    color:green;
+    color:#007185b0;
+    width:fit-content;
+    padding-bottom:0;
+    font-size:14px;
+}
+.delivery__container__content__header2:hover{
+    border-bottom:1px solid rgb(221, 112, 112);
+    color: rgb(221, 112, 112);
 }
 .delivery__location__btn{
-    text-align:left;
+    margin-left:20px;
+    margin-right:20px;
+    width:90%;
+    text-align:left
+}
+.delivery__country__select{
+    align-items:center;
+    height:50px;
 }

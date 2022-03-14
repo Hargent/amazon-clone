@@ -1,29 +1,30 @@
 import React, {useState,useEffect}from 'react';
 import './Deliver.css';
-import DeliveryLocation from './Delivery_location';
+// import DeliveryLocation from './Delivery_location';
 import {useStateValue} from '../Reducers/StateProvider';
+import CountrySelect from './DeliveryLocation.js';
 
 
 
 function Delivery({closeDelivery}){
 
-	const [Location, setLocation] = useState(false);
-	const [{country},dispatch] = useStateValue();
+	// const [Location, setLocation] = useState(false);
+	// const [{country},dispatch] = useStateValue();
 
-	const isLocation = ()=> {
-		if (!Location){
-			setLocation(true)
-		}else{
-			setLocation(false)
-		}
-	}
-	let place;
-	let name = country?.location
-	if (name === undefined){
-		place = 'Country'
-	}else{
-		place = name
-	}
+	// const isLocation = ()=> {
+	// 	if (!Location){
+	// 		setLocation(true)
+	// 	}else{
+	// 		setLocation(false)
+	// 	}
+	// }
+	// let place;
+	// let name = country?.location
+	// if (name === undefined){
+	// 	place = 'Country'
+	// }else{
+	// 	place = name
+	// }
 
 
 return(
@@ -40,13 +41,16 @@ return(
 				<h5 className="delivery__container__content__divider">or enter a US zip code</h5>
 			</div>
 			<div className="delivery__container__content__zip__content">
-				<input onClick={()=>{}} className="delivery__container__zip__content__input" />
+				<input  className="delivery__container__zip__content__input" />
 				<button className="delivery__container__zip__content__button">Apply</button>
 			</div>
 			<div className="delivery__container__content__divider__container">
 				<h5 className="delivery__container__content__divider__two">or</h5>
 			</div>
-			<div >
+			<div className="delivery__country__select">
+				<CountrySelect/>
+			</div>
+			{/* <div >
 			<button className="delivery__location__btn" onClick={isLocation}>
                 <div>
                     <span>{place}</span>
@@ -54,7 +58,7 @@ return(
             </button>
             {Location && <DeliveryLocation closeLocation={setLocation} />}
 				
-			</div>
+			</div> */}
 		</div>
 		</div>
 		<button className="delivery__container__cancel" onClick={()=>{closeDelivery(false)}}>X</button>
