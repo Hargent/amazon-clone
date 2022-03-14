@@ -40,7 +40,7 @@ function Header() {
             className="header__logo" 
             src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" 
             alt="Amazon"
-            />
+            ></img>
             </Link>
             {/* Delivery location */}
             <button className="delivery__btn" onClick={()=>{setOpenDelivery(true)}}>
