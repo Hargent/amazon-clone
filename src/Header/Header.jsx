@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -20,7 +20,11 @@ function Header() {
     const [openDelivery, setOpenDelivery] = useState(false);
     const [openAll, setOpenAll] = useState(false)
     const [{basket,user},dispatch] = useStateValue();
-    const name = user?.displayName;
+    const [name, setName] = useState(null) ;
+
+    useEffect(()=>{
+        setName(user?.displayName);
+    },[user?.displayName])
     const handleAuth = () =>{
         if(user){
             auth.signOut();

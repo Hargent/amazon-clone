@@ -11,6 +11,7 @@ function Login({closeLogin}) {
     const [isSignUp,setIsSignUp] = useState(true)
     const [isAgree,setIsAgree] = useState(false)
     const [isDisabled,setIsDisabled] = useState(true)
+
     const navigate = useNavigate();
     const [input,setInput] = useState({
         displayName:"",
@@ -130,7 +131,7 @@ function Login({closeLogin}) {
                     console.log(err.message)
                     closeLogin(true)
                     setIsSignUp(false)
-                    window.location.reload(true);
+                    // window.location.reload(true);
                 });
             }catch(err){
                 console.log(err.message)
