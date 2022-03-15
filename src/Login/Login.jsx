@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import './Login.css';
 import {Link,useNavigate} from 'react-router-dom';
-import {createUserWithEmailAndPassword,signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider,RecaptchaVerifier,TwitterAuthProvider,updateProfile  } from "firebase/auth";
 import {auth,update,provider} from './firebase';
 import ErrorOutlinedIcon from '@mui/icons-material/ErrorOutlined';
-import {updateProfile } from "firebase/auth";
 import {useStateValue} from '../Reducers/StateProvider';
-
 //login with google
+
 
 
 
@@ -70,6 +70,35 @@ function Login({closeLogin}) {
             const credential = GoogleAuthProvider.credentialFromError(error);
             // ...
         });
+    }
+    //twitter signu p
+    function twitterLogin(){
+        const provider = new TwitterAuthProvider();
+        auth.languageCode = 'it';
+        provider.setCustomParameters({
+            'lang': 'es'
+          });
+         signInWithPopup(auth, provider)
+          .then((result) => {
+            // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+            // You can use these server side with your app's credentials to access the Twitter API.
+            const credential = TwitterAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            const secret = credential.secret;
+        
+            // The signed-in user info.
+            const user = result.user;
+            // ...
+          }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.email;
+            // The AuthCredential type that was used.
+            const credential = TwitterAuthProvider.credentialFromError(error);
+            // ...
+          });
     }
     const Agree =() =>{
         const decide= !isAgree?true:false
@@ -333,12 +362,14 @@ function Login({closeLogin}) {
                         </div>:
                         <p>Login today and enjoy a wonderful shopping experience.</p>}
                     </div>
+                    
                     <button  type='submit' onClick={isRegister} className="login__registerButton">{isSignUp?'Create a new Amazon account':'Login to your Amazon account'}</button>
-                </div>
+                    <button className='google__signIn__btn'  onClick={googleSignUp}><img href="src\Image\icons8-google-48 (1).png" alt=''/>Continue with Google</button>
+                    <button className='twitter__signIn__btn'  onClick={twitterLogin}><img href="src\Image\icons8-google-48 (1).png" alt=''/>Continue with Twitter</button>
+                    </div>
             </div>
             <button className={isSignUp?"login__container__cancel":"disabled__login__container__cancel"} onClick={()=>{closeLogin(false)}}>X</button>
-            <button className='google__signIn__btn'  onClick={googleSignUp}><img href='https://img.icons8.com/color/344/google-logo.png'/></button>
-        </div>
+            </div>
     )
 }
 

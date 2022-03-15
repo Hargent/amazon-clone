@@ -2,6 +2,7 @@ import React, {useState,useEffect}from 'react';
 import './Deliver.css';
 import DeliveryLocation from './Delivery_location';
 import {useStateValue} from '../Reducers/StateProvider';
+import DeliveryCountry from './trial'
 
 
 
@@ -47,6 +48,7 @@ return(
 				<h5 className="delivery__container__content__divider__two">or</h5>
 			</div>
 			<div >
+				<DeliveryCountry/>
 			<button className="delivery__location__btn" onClick={isLocation}>
                 <div>
                     <span>{place}</span>

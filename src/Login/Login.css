@@ -32,18 +32,23 @@
     /* height: 100vh; */
     align-items: center;
     background-color: #fff;
-    width:300px;
+    width:400px;
     height:fit-content;
     border-radius: 5px;
     padding:20px;
+    padding-top: 10px;
+    border-top: solid #70706724;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-style: double;
 }
 .outer__container{
     box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548);
     border-radius:10px;
 }
 .login__logo{
-    margin-top:20px;
-    margin-bottom: 20px;
+    /* margin-top:20px; */
+    /* margin-bottom: 20px; */
     object-fit: contain;
     width:100px;
     margin-right: auto;
@@ -142,7 +147,10 @@
     font-family:"IslandMoments-Regular";
     margin-top:10px;
     color:rgba(71, 60, 60, 0.87);
-    font-size:20px;
+    font-size:30px;
+    width: 100%;
+    padding: 10px;
+    margin-left: 20px;
 }
 
 .login__signInButton:hover{
@@ -166,8 +174,39 @@
     margin-bottom: 20px;
 }
 .google__signIn__btn{
-    background-image:url('https://img.icons8.com/color/344/google-logo.png')
+    /* background-image:url('https://img.icons8.com/color/344/google-logo.png'); */
+    padding:10px;
+    border-radius: 5px;
+    width:100%;
+    height: 30px;
+    border:1px solid;
+    margin-top:10px;
+    border-color:darkgrey;
+    cursor:pointer;
+    margin-bottom: 10px;
+    text-align:center;
+    vertical-align:middle;
 }
-.google__signIn__btn > img{
-    z-index:10;
+.google__signIn__btn:hover{
+    color:#f0c14b;
+    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
 }
+.twitter__signIn__btn{
+    padding:10px;
+    border-radius: 5px;
+    width:100%;
+    height: 30px;
+    border:1px solid;
+    margin-top:10px;
+    border-color:darkgrey;
+    cursor:pointer;
+    margin-bottom: 10px;
+    text-align:center;
+    vertical-align:middle;
+}
+.twitter__signIn__btn:hover{
+    color:#f0c14b;
+    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
+}
+
+
