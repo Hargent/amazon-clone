@@ -1,16 +1,24 @@
 import React, {useState} from 'react';
 import './Login.css';
 import {Link,useNavigate} from 'react-router-dom';
-import {createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
-import {auth,update} from './firebase';
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {auth,update,provider} from './firebase';
 import ErrorOutlinedIcon from '@mui/icons-material/ErrorOutlined';
 import {updateProfile } from "firebase/auth";
+import {useStateValue} from '../Reducers/StateProvider';
+
+//login with google
+
+
+
+
 
 
 function Login({closeLogin}) {
     const [isSignUp,setIsSignUp] = useState(true)
     const [isAgree,setIsAgree] = useState(false)
     const [isDisabled,setIsDisabled] = useState(true)
+    const [{basket,user},dispatch] = useStateValue();
 
     const navigate = useNavigate();
     const [input,setInput] = useState({
@@ -36,6 +44,32 @@ function Login({closeLogin}) {
         };
         });
         
+    }
+    //google login
+    function googleSignUp(){
+
+        auth.languageCode = 'it'
+    
+        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    
+        signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // ...
+        }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+        });
     }
     const Agree =() =>{
         const decide= !isAgree?true:false
@@ -120,10 +154,14 @@ function Login({closeLogin}) {
                     const userName= auth.user.auth.currentUser.displayName
                     updateProfile(auth.user.auth.currentUser, {'displayName': `${input.displayName}`})
                     .then((user)=>{
-                        console.log(user)
+                        console.log(user.displayName)
                         console.log('Username saved')
                     }).catch((err)=>{
                             console.log(err.message,'username not saved')
+                    })
+                    dispatch({
+                        type:'SET_USER',
+                        displayName:userName
                     })
                     closeLogin(false)
                     console.log('username is', userName)
@@ -299,6 +337,7 @@ function Login({closeLogin}) {
                 </div>
             </div>
             <button className={isSignUp?"login__container__cancel":"disabled__login__container__cancel"} onClick={()=>{closeLogin(false)}}>X</button>
+            <button className='google__signIn__btn'  onClick={googleSignUp}><img href='https://img.icons8.com/color/344/google-logo.png'/></button>
         </div>
     )
 }

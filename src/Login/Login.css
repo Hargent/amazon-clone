@@ -165,3 +165,9 @@
     font-family:"LuxuriousRoman-Regular";
     margin-bottom: 20px;
 }
+.google__signIn__btn{
+    background-image:url('https://img.icons8.com/color/344/google-logo.png')
+}
+.google__signIn__btn > img{
+    z-index:10;
+}
