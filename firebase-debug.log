@@ -1,47 +1,45 @@
-[debug] [2022-03-16T02:17:57.046Z] ----------------------------------------------------------------------
-[debug] [2022-03-16T02:17:57.052Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SILVER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2022-03-16T02:17:57.052Z] CLI Version:   10.2.2
-[debug] [2022-03-16T02:17:57.053Z] Platform:      win32
-[debug] [2022-03-16T02:17:57.053Z] Node Version:  v17.4.0
-[debug] [2022-03-16T02:17:57.085Z] Time:          Wed Mar 16 2022 03:17:57 GMT+0100 (West Africa Standard Time)
-[debug] [2022-03-16T02:17:57.086Z] ----------------------------------------------------------------------
+[debug] [2022-03-16T06:37:39.627Z] ----------------------------------------------------------------------
+[debug] [2022-03-16T06:37:39.631Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SILVER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-03-16T06:37:39.633Z] CLI Version:   10.2.2
+[debug] [2022-03-16T06:37:39.633Z] Platform:      win32
+[debug] [2022-03-16T06:37:39.633Z] Node Version:  v17.4.0
+[debug] [2022-03-16T06:37:39.641Z] Time:          Wed Mar 16 2022 07:37:39 GMT+0100 (West Africa Standard Time)
+[debug] [2022-03-16T06:37:39.648Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-03-16T02:17:57.093Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2022-03-16T02:17:57.484Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-03-16T02:17:57.484Z] > authorizing via signed-in user (yemisi3385@gmail.com)
+[debug] [2022-03-16T06:37:40.304Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-16T06:37:40.305Z] > authorizing via signed-in user (yemisi3385@gmail.com)
 [info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
 [warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project clone-2bf0a. This may result in unexpected behavior. 
-[debug] [2022-03-16T02:17:57.532Z] [hub] writing locator at C:\Users\SILVER\AppData\Local\Temp\hub-clone-2bf0a.json
+[debug] [2022-03-16T06:37:40.864Z] [hub] writing locator at C:\Users\SILVER\AppData\Local\Temp\hub-clone-2bf0a.json
 [warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
 [warn] !  Your requested "node" version "16" doesn't match your global version "17". Using node@17 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"17\". Using node@17 from host."}}
-[debug] [2022-03-16T02:17:57.690Z] defaultcredentials: writing to file C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json
-[debug] [2022-03-16T02:17:57.694Z] Setting GAC to C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\SILVER\\AppData\\Roaming\\firebase\\yemisi3385_gmail_com_application_default_credentials.json"}}
-[debug] [2022-03-16T02:17:57.697Z] > refreshing access token with scopes: []
-[debug] [2022-03-16T02:17:57.698Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2022-03-16T06:37:40.993Z] defaultcredentials: writing to file C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json
+[debug] [2022-03-16T06:37:40.996Z] Setting GAC to C:\Users\SILVER\AppData\Roaming\firebase\yemisi3385_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\SILVER\\AppData\\Roaming\\firebase\\yemisi3385_gmail_com_application_default_credentials.json"}}
+[debug] [2022-03-16T06:37:41.002Z] > refreshing access token with scopes: []
+[debug] [2022-03-16T06:37:41.003Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2022-03-16T02:17:58.741Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Wed, 16 Mar 2022 02:17:59 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2022-03-16T02:17:58.997Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig [none]
-[debug] [2022-03-16T02:17:59.008Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2022-03-16T02:17:59.009Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2022-03-16T02:17:59.650Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig 200
-[debug] [2022-03-16T02:17:59.650Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig {"projectId":"clone-2bf0a","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3"}
-[debug] [2022-03-16T02:17:59.694Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 
-[debug] [2022-03-16T02:18:01.766Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 200
-[debug] [2022-03-16T02:18:01.766Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites {"sites":[{"name":"projects/582926062597/sites/clone-2bf0a","defaultUrl":"https://clone-2bf0a.web.app","appId":"1:582926062597:web:8d42b19147ecb14977f86c","type":"DEFAULT_SITE"}]}
-[debug] [2022-03-16T02:18:01.766Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config [none]
-[debug] [2022-03-16T02:18:03.368Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config 200
-[debug] [2022-03-16T02:18:03.368Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config {"projectId":"clone-2bf0a","appId":"1:582926062597:web:8d42b19147ecb14977f86c","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3","apiKey":"AIzaSyCcAhTdRlTbbbXZ3JpWLXkSh9zEOhr-4Ds","authDomain":"clone-2bf0a.firebaseapp.com","messagingSenderId":"582926062597","measurementId":"G-GTK0BLZHZK"}
+[debug] [2022-03-16T06:37:41.409Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 16 Mar 2022 06:37:41 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-16T06:37:41.463Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig [none]
+[debug] [2022-03-16T06:37:42.108Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig 200
+[debug] [2022-03-16T06:37:42.108Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/adminSdkConfig {"projectId":"clone-2bf0a","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3"}
+[debug] [2022-03-16T06:37:42.146Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 
+[debug] [2022-03-16T06:37:43.805Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites 200
+[debug] [2022-03-16T06:37:43.806Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/clone-2bf0a/sites {"sites":[{"name":"projects/582926062597/sites/clone-2bf0a","defaultUrl":"https://clone-2bf0a.web.app","appId":"1:582926062597:web:8d42b19147ecb14977f86c","type":"DEFAULT_SITE"}]}
+[debug] [2022-03-16T06:37:43.806Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config [none]
+[debug] [2022-03-16T06:37:44.953Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config 200
+[debug] [2022-03-16T06:37:44.954Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2bf0a/webApps/1:582926062597:web:8d42b19147ecb14977f86c/config {"projectId":"clone-2bf0a","appId":"1:582926062597:web:8d42b19147ecb14977f86c","storageBucket":"clone-2bf0a.appspot.com","locationId":"asia-northeast3","apiKey":"AIzaSyCcAhTdRlTbbbXZ3JpWLXkSh9zEOhr-4Ds","authDomain":"clone-2bf0a.firebaseapp.com","messagingSenderId":"582926062597","measurementId":"G-GTK0BLZHZK"}
 [info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
 [info] +  hosting: Local server: http://0.0.0.0:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://0.0.0.0:5000\u001b[22m\u001b[24m"}}
-[debug] [2022-03-16T02:18:03.486Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2022-03-16T02:18:03.486Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2022-03-16T02:18:03.486Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\SILVER\\.cache\\firebase\\emulators\\ui-v1.6.5\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\SILVER\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.5\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
+[debug] [2022-03-16T06:37:45.419Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-16T06:37:45.421Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-16T06:37:45.422Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\SILVER\\.cache\\firebase\\emulators\\ui-v1.6.5\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\SILVER\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.5\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2022-03-16T02:18:03.881Z] Web / API server started at localhost:4000
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[debug] [2022-03-16T06:37:46.178Z] Web / API server started at localhost:4001
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4001\n"}}
 [info] i  functions: Watching "C:\PROJECTS\amazon-clone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\PROJECTS\\amazon-clone\\functions\" for Cloud Functions..."}}
-[debug] [2022-03-16T02:18:04.042Z] Validating nodejs source
-[debug] [2022-03-16T02:18:14.617Z] > [functions] package.json contents: {
+[debug] [2022-03-16T06:37:46.319Z] Validating nodejs source
+[debug] [2022-03-16T06:38:07.297Z] > [functions] package.json contents: {
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
@@ -70,19 +68,19 @@
   },
   "private": true
 }
-[debug] [2022-03-16T02:18:14.618Z] Building nodejs source
-[debug] [2022-03-16T02:18:14.619Z] Analyzing nodejs backend spec
+[debug] [2022-03-16T06:38:07.312Z] Building nodejs source
+[debug] [2022-03-16T06:38:07.313Z] Analyzing nodejs backend spec
 [info] +  functions[us-central1-api]: http function initialized (http://localhost:5001/clone-2bf0a/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/clone-2bf0a/us-central1/api)."}}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://localhost:4000                │
+│ i  View Emulator UI at http://localhost:4001                │
 └─────────────────────────────────────────────────────────────┘
 
 ┌───────────┬────────────────┬─────────────────────────────────┐
 │ Emulator  │ Host:Port      │ View in Emulator UI             │
 ├───────────┼────────────────┼─────────────────────────────────┤
-│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+│ Functions │ localhost:5001 │ http://localhost:4001/functions │
 ├───────────┼────────────────┼─────────────────────────────────┤
 │ Hosting   │ 0.0.0.0:5000   │ n/a                             │
 └───────────┴────────────────┴─────────────────────────────────┘

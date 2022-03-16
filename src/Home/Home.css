@@ -9,15 +9,21 @@
 .home__row{
     display:flex;
     z-index: 1;
-    /* margin-top:50px; */
+    /* margin-top:-200px; */
     margin-left:5px;
     margin-right:5px;
 }
-
+.home__column{
+    background:none;
+}
 
 .home__img{
     width: 100%;
     z-index: -1;
     margin-bottom:-20%;
     mask-image:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.home__row__1{
+    background:none;
+    margin:20px;
 }

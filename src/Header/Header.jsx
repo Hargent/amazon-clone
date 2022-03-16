@@ -9,8 +9,9 @@ import Login from '../Login/Login';
 import Delivery from '../Deliver/Deliver';
 import All from '../All/All';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import LanguageChange from '../LanguageChange/languageChange'
 import SecondHeader from './trial'
+
 
 
 
@@ -20,8 +21,9 @@ function Header() {
     const [openLogin, setOpenLogin] = useState(false);
     const [openDelivery, setOpenDelivery] = useState(false);
     const [openAll, setOpenAll] = useState(false)
-    const [{basket,user},dispatch] = useStateValue();
+    const [{basket,user,country},dispatch] = useStateValue();
     const [name, setName] = useState(null) ;
+    console.log('Your country is',country)
 
     useEffect(()=>{
         setName(user?.displayName);
@@ -31,7 +33,7 @@ function Header() {
             auth.signOut();
         }
     }
-
+    let state = (country===null)?'Nigeria':country
 
     return (
         <div className="header__container">
@@ -49,25 +51,24 @@ function Header() {
                     <LocationOnOutlinedIcon className='delivery__icon'/>
                     <div>
                         <span>Deliver to</span><br/>
-                        <span>Nigeria</span>
+                        <span id="user__location">{(country===null)?'Nigeria':country}</span>
                     </div>
                 </button>
                 {openDelivery && <Delivery closeDelivery={setOpenDelivery} />}
                 {/* search  bar */}
                 <div className="header__search">
-                    <button className="all__btn" onClick={()=>{setOpenAll(true)}}>
-                        <div className="all__btn__content">
-                            All
-                            <ArrowDropDownOutlinedIcon/>
-                        </div>
-                        </button>
-                    {openAll && <All closeAll={setOpenAll} />}
+                    <div className="header__search__all">
+                        <All />
+                    </div>
                     <input
                     className="header__searchInput"
                     />
                     <SearchIcon 
                     className="header__searchIcon"
                     />
+                </div>
+                <div className="header__language__change">
+                    <LanguageChange/>
                 </div>
                 {/* nav items */}
                 <div className="header__nav">
@@ -80,10 +81,6 @@ function Header() {
                         <span className="header__optionLineOne">Returns</span>
                         <span className="header__optionLineTwo">& Orders</span>
                     </div>
-                    <div className="header__option">
-                        <span className="header__optionLineOne">Your</span>
-                        <span className="header__optionLineTwo">Prime</span>
-                    </div> 
                     <Link to='/checkout'>
                         <div className="header__optionBasket">
                             <ShoppingCartOutlinedIcon/>

@@ -9,9 +9,8 @@ function Home() {
             <div className="home__container">
                 <SlideShow/>
                 {/* <img className="home__img" /*src={require("C:/PROJECTS/amazon-clone/src/6385958.jpg") src='https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg'alt="Home pics"/>*/}
-        </div> 
         <div className='home_column'>
-            <div className="home__row">
+            <div className="home__row home__row__1">
                 <Product
                     id="12321341"
                     title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
@@ -63,6 +62,7 @@ function Home() {
             </div> 
         </div>
         </div>
+    </div> 
     )
 }
 

@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
-import './trial.css'
-// import {useStateValue} from '../Reducers/StateProvider';
+import './ChooseCountry.css'
+import {useStateValue} from '../Reducers/StateProvider';
 
 function sleep(delay = 0) {
     return new Promise((resolve) => {
@@ -14,26 +14,12 @@ function sleep(delay = 0) {
 }
 
 export default function DeliveryCountry() {
+    const [{country},dispatch] = useStateValue();
     // const [{country},dispatch] = useStateValue();
     const [open, setOpen] = React.useState(false);
     const [options, setOptions] = React.useState([]);
     // const [countryInput, setCountryInput] = React.useState(null)
     const loading = open && options.length === 0;
-
-    // const submitLocation = (()=>{
-        
-    //     try{
-    //         dispatch({
-    //             type:'SET_LOCATION',
-    //             location :{
-    //                 location:countryInput,
-    //             }
-    //         })
-    //     }catch(err){
-    //             console.log(err)
-    //         }
-    // })
-
     React.useEffect(() => {
         let active = true;
 
@@ -71,7 +57,12 @@ export default function DeliveryCountry() {
         onClose={() => {
             setOpen(false);
         }}
-        isOptionEqualToValue={(option, value) => option.label === value.label}
+        isOptionEqualToValue={(option, value) =>( option.label === value.label,
+            dispatch({
+                type:'SET_LOCATION',
+                location:value.label
+            })
+            )}
         getOptionLabel={(option) => option.label}
         options={options}
         loading={loading}
@@ -88,6 +79,7 @@ export default function DeliveryCountry() {
             </Box>
             )}
         renderInput={(params) => (
+            console.log('country is ', params),
             <TextField
             {...params}
             label="Choose a country"

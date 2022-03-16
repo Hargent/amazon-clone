@@ -17,3 +17,26 @@
     height:25px;
     font-weight:400;
 }
+.css-11c4yfq-MuiButtonBase-root-MuiButton-root {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    background-color:rgb(250, 244, 244);
+}
+#search_categories{
+    font-size:8px;
+    
+}
+#search_categories__container{
+    background-color:white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 5px;
+}
+
+#search_categories__container:hover,
+#search_categories__btn:hover{
+    background-color:rgba(238, 234, 234, 0.945);
+}

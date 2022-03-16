@@ -1,7 +1,8 @@
 import React, {useState,useEffect}from 'react';
 import './Deliver.css';
 import {useStateValue} from '../Reducers/StateProvider';
-import DeliveryCountry from './trial'
+import DeliveryCountry from './ChooseCountry';
+import DoneButton from './DoneButton';
 
 
 
@@ -48,17 +49,14 @@ return(
 			</div>
 			<div >
 				<DeliveryCountry/>
-			<button className="delivery__location__btn">
-                <div>
-                    <span>DONE</span>
-                </div>
-            </button>
-				
+			<div className="delivery__location__btn__container">
+				<button className="delivery__location__btn" onClick={()=>{closeDelivery(false)}}><DoneButton /></button>
+            </div>
 			</div>
 		</div>
 		</div>
+	</div>
 		<button className="delivery__container__cancel" onClick={()=>{closeDelivery(false)}}>X</button>
-		</div>
 </div>
 )
 };

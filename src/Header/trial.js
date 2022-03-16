@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from './trialDraw'
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Buy Again', 'Amazon Basics', 'Prime Video','Prime','Today\'s Deals','Customers Services','Best Sellers','Browsing History','Kindle Books','New Releases','Gift Cards','Books','Support Women Owned Small Business'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -38,15 +38,16 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="100%">
         <Toolbar disableGutters>
           <Drawer/>
-          <Box sx={{ flexGrow: 1, display:'flex'}}>
+          <Box sx={{ flexGrow: 1, display:'flex',marginBottom:0,}}>
             {pages.map((page) => (
               <Button
+              className="second__nav__buttons"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'flex' }}
+                sx={{ my: 2, color: 'white',fontSize: '10px' ,display: 'flex'}}
               >
                 {page}
               </Button>
@@ -56,7 +57,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={require("C:/PROJECTS/amazon-clone/src/Image/Amazon.png")} />
               </IconButton>
             </Tooltip>
             <Menu

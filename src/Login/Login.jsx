@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Login.css';
 import {Link,useNavigate} from 'react-router-dom';
-
+import { FaGoogle } from 'react-icons/fa';
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider,RecaptchaVerifier,TwitterAuthProvider,updateProfile  } from "firebase/auth";
 import {auth,update,provider} from './firebase';
 import ErrorOutlinedIcon from '@mui/icons-material/ErrorOutlined';
@@ -362,10 +362,10 @@ function Login({closeLogin}) {
                         </div>:
                         <p>Login today and enjoy a wonderful shopping experience.</p>}
                     </div>
-                    
+                    <img href="src/Image/icons8-google-48 (1).png" alt=''/>
                     <button  type='submit' onClick={isRegister} className="login__registerButton">{isSignUp?'Create a new Amazon account':'Login to your Amazon account'}</button>
-                    <button className='google__signIn__btn'  onClick={googleSignUp}><img href="src\Image\icons8-google-48 (1).png" alt=''/>Continue with Google</button>
-                    <button className='twitter__signIn__btn'  onClick={twitterLogin}><img href="src\Image\icons8-google-48 (1).png" alt=''/>Continue with Twitter</button>
+                    <button className='google__signIn__btn'  onClick={googleSignUp}><FaGoogle/>Continue with Google</button>
+                    <button className='twitter__signIn__btn'  onClick={twitterLogin}><img href="src/Image/icons8-google-48 (1).png" alt=''/>Continue with Twitter</button>
                     </div>
             </div>
             <button className={isSignUp?"login__container__cancel":"disabled__login__container__cancel"} onClick={()=>{closeLogin(false)}}>X</button>
