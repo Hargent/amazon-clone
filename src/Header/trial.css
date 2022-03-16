@@ -1,0 +1,6 @@
+.nav__items{
+display:flex;
+}
+.nav__items > p {
+  margin:10px
+}

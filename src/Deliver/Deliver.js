@@ -1,6 +1,5 @@
 import React, {useState,useEffect}from 'react';
 import './Deliver.css';
-import DeliveryLocation from './Delivery_location';
 import {useStateValue} from '../Reducers/StateProvider';
 import DeliveryCountry from './trial'
 
@@ -49,12 +48,11 @@ return(
 			</div>
 			<div >
 				<DeliveryCountry/>
-			<button className="delivery__location__btn" onClick={isLocation}>
+			<button className="delivery__location__btn">
                 <div>
-                    <span>{place}</span>
+                    <span>DONE</span>
                 </div>
             </button>
-            {Location && <DeliveryLocation closeLocation={setLocation} />}
 				
 			</div>
 		</div>

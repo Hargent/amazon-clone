@@ -10,7 +10,7 @@ import Delivery from '../Deliver/Deliver';
 import All from '../All/All';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
-import SecondHeader from './nav-bar'
+import SecondHeader from './trial'
 
 
 
