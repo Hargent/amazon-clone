@@ -1,20 +1,18 @@
-import React,{useState,useEffect} from 'react';
 import './Header.css'
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import {Link} from 'react-router-dom';
-import {useStateValue} from '../Reducers/StateProvider';
-import {auth} from '../Login/firebase';
-import Login from '../Login/Login';
-import Delivery from '../Deliver/Deliver';
+
+import React,{useEffect, useState} from 'react';
+
 import All from '../All/All';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import Delivery from '../Deliver/Deliver';
 import LanguageChange from '../LanguageChange/languageChange'
-import SecondHeader from './trial'
-
-
-
-
+import {Link} from 'react-router-dom';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import Login from '../Login/Login';
+import SearchIcon from '@mui/icons-material/Search';
+import SecondHeader from './Header__2'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import {auth} from '../Login/firebase';
+import {useStateValue} from '../Reducers/StateProvider';
 
 function Header() {
 
@@ -37,6 +35,7 @@ function Header() {
 
     return (
         <div className="header__container">
+            <div id="home"></div>
             <div className="header">
                 <Link to='/'>
                 {/* logo */}

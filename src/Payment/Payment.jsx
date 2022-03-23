@@ -1,19 +1,16 @@
-
-import React,{useState,useEffect} from 'react';
 import './Payment.css';
-import {useStateValue} from '../Reducers/StateProvider';
+
+import {CardElement, useElements, useStripe} from '@stripe/react-stripe-js';
+import{Link, useNavigate} from 'react-router-dom';
+import React,{useEffect, useState} from 'react';
+import {addDoc, collection, doc, updateDoc} from 'firebase/firestore';
+
 import CheckoutProduct from '../Checkout_Products/CheckoutProduct';
-import{Link,useNavigate} from 'react-router-dom';
-import {CardElement,useStripe,useElements} from '@stripe/react-stripe-js';
-import {getBasketTotal} from '../Reducers/reducer';
 import CurrencyFormat from 'react-currency-format';
 import axios from '../Axios/Axios';
 import {db} from '../Login/firebase';
-import {collection,doc, setDoc,addDoc} from 'firebase/firestore';
-
-
-
-
+import {getBasketTotal} from '../Reducers/reducer';
+import {useStateValue} from '../Reducers/StateProvider';
 
 function Payment() {
     const [{basket,user},dispatch] = useStateValue();
@@ -59,7 +56,7 @@ function Payment() {
                 }
             // console.log(data.amount)
             const orderRef = doc(db,"orders",user?.uid)
-            setDoc(orderRef,{
+            updateDoc(orderRef,{
                 basket:basket,
                 amount:paymentIntent.amount,
                 created:paymentIntent.created,

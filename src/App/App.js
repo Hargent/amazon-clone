@@ -1,19 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import './App.css';
-import React,{useEffect } from 'react';
+
+import React,{useEffect} from 'react';
+import {Route, BrowserRouter as Router, Routes} from 'react-router-dom';
+
+import Checkout from '../Checkout/Checkout';
+import {Elements} from  '@stripe/react-stripe-js';
+import Footer from '../Footer/Footer'
 import Header from '../Header/Header';
 import Home from '../Home/Home';
-import Checkout from '../Checkout/Checkout';
-import Payment from '../Payment/Payment';
 import Login from '../Login/Login';
 import Orders from '../Orders/Orders';
-import {BrowserRouter as Router , Routes, Route} from 'react-router-dom';
-import {onAuthStateChanged } from "firebase/auth";
+import Payment from '../Payment/Payment';
 import {auth} from '../Login/firebase';
-import {useStateValue}  from '../Reducers/StateProvider';
 import {loadStripe} from '@stripe/stripe-js';
-import {Elements} from  '@stripe/react-stripe-js';
-
+import {onAuthStateChanged} from "firebase/auth";
+import {useStateValue}  from '../Reducers/StateProvider';
 
 const promise = loadStripe('pk_test_51KaxcTDN48fJO0vuojtAupq1pu5JfhYf7KoHioAHTb5w3tq24SAMNRI9waQrwibArbR9TPXODgwsv5srXpj2Vw1300L7YSLI0u')
 
@@ -52,6 +54,7 @@ function App() {
               <div>
                 <Header />
                 <Orders/>
+                <Footer/>
               </div>
             }/>
             {/* Login page */}
@@ -63,6 +66,7 @@ function App() {
             <div>
                 <Header />
                 <Checkout/>
+                <Footer/>
             </div> 
             } />
             {/* payment page */}
@@ -71,14 +75,22 @@ function App() {
                 <div>
                     <Header/>
                     <Payment/>
+                    <Footer/>
                 </div> 
               </Elements>
             } />
             {/* Home page */}
             <Route exact path='/' element={
             <div>
-              <Header />
+              <div>
+                <Header />
+                </div>
+                <div>
                 <Home/>
+                </div>
+                <div>
+                <Footer/>
+                </div>
             </div> 
             } />
           </Routes>

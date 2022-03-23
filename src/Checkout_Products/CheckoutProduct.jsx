@@ -1,8 +1,8 @@
-import React from 'react';
 import './CheckoutProduct.css';
+
+import React from 'react';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import {useStateValue} from '../Reducers/StateProvider';
-
 
 function CheckoutProduct({id,image,title,price,rating}) {
 

@@ -1,6 +1,7 @@
-import React from 'react';
 import './Home.css'
+
 import Product from '../Products/Product';
+import React from 'react';
 import SlideShow from '../SlideShow/SlideShow'
 
 function Home() {
@@ -8,8 +9,50 @@ function Home() {
         <div className="Home">
             <div className="home__container">
                 <SlideShow/>
+                <div className="home__categories__grid__container">
+                    <div className="home__new__arrival grid__item">
+                        <div className="home__category__header">
+                            <h3>New Arrivals</h3>
+                        </div>    
+                    </div>
+                    <div className="home__advert grid__item">
+                        <div className="home__category__header">
+                            <h3>Ads</h3>
+                        </div>    
+                    </div>
+                    <div className="home__discounted grid__item">
+                        <div className="home__category__header">
+                            <h3>Top Discounts<span>50%</span> Off</h3>
+                        </div>    
+                    </div>
+                    <div className="home__best__prices grid__item">
+                        <div className="home__category__header">
+                            <h3>Best Prices <span>10%</span>off</h3>
+                        </div>    
+                    </div>
+                    <div className="home__male__section grid__item">
+                        <div className="home__category__header">
+                            <h3>Male section</h3>
+                        </div>    
+                    </div>
+                    <div className="home__female__section grid__item">
+                        <div className="home__category__header">
+                            <h3>Female section</h3>
+                        </div>    
+                    </div>
+                    <div className="home__recipes grid__item">
+                        <div className="home__category__header">
+                            <h3>Food Recipes</h3>
+                        </div>    
+                    </div>
+                    <div className="home__electronics grid__item">
+                        <div className="home__category__header">
+                            <h3>Electronics & Technology</h3>
+                        </div>    
+                    </div>
+                </div>
                 {/* <img className="home__img" /*src={require("C:/PROJECTS/amazon-clone/src/6385958.jpg") src='https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg'alt="Home pics"/>*/}
-        <div className='home_column'>
+        {/* <div className='home_column'>
             <div className="home__row home__row__1">
                 <Product
                     id="12321341"
@@ -60,7 +103,7 @@ function Home() {
                     image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
                 />
             </div> 
-        </div>
+        </div> */}
         </div>
     </div> 
     )

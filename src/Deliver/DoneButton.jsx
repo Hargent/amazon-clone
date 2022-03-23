@@ -1,6 +1,8 @@
+import './DoneButton.css';
+
+import Fab from '@material-ui/core/Fab';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,7 +20,7 @@ function DoneButton() {
 
   return (
     <div  className={classes.root}>
-      <div id="done__btn">
+      <div className="done__btn">
         <Fab
         variant="extended">
           DONE

@@ -2,9 +2,10 @@
   margin:0;
 }
 body {
-  background-color:rgb(234,237,237);
   margin: 0;
   width:fit-content;
+  width:-moz-fit-content;
+  -ms-width:-ms-fit-content;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
