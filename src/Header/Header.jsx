@@ -3,14 +3,18 @@ import './Header.css'
 import React,{useEffect, useState} from 'react';
 
 import All from '../All/All';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Delivery from '../Deliver/Deliver';
+import { IconFlagUS } from 'material-ui-flags';
 import LanguageChange from '../LanguageChange/languageChange'
 import {Link} from 'react-router-dom';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import Login from '../Login/Login';
+import Popover from '@mui/material/Popover';
 import SearchIcon from '@mui/icons-material/Search';
 import SecondHeader from './Header__2'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Typography from '@mui/material/Typography';
 import {auth} from '../Login/firebase';
 import {useStateValue} from '../Reducers/StateProvider';
 
@@ -32,6 +36,66 @@ function Header() {
         }
     }
     let state = (country===null)?'Nigeria':country
+
+    function GuestLogin() {
+        const [anchorEl, setAnchorEl] = useState(null);
+
+        const handlePopoverOpen = (event) => {
+            setAnchorEl(event.currentTarget);
+        };
+
+        const handlePopoverClose = () => {
+            setAnchorEl(null);
+        };
+
+        const open = Boolean(anchorEl);
+
+        return (
+            <div>
+            <Typography
+                aria-owns={open ? 'mouse-over-popover' : undefined}
+                aria-haspopup="true"
+                onMouseEnter={handlePopoverOpen}
+                
+            >
+                <div className="header__option" onClick={handleAuth}>
+                        <span className="header__optionLineOne">Hello {user?`${name}`:'Guest'}</span>
+                        <button className="header__optionLineTwo header__sigIin__button" onClick={()=>{setOpenLogin(true)}}>{user? 'Sign Out': 'Sign In'} </button>
+                        {openLogin && !user && <Login closeLogin={setOpenLogin} />}
+                </div>
+            </Typography>
+            <Popover
+                id="mouse-over-popover"
+                sx={{
+                pointerEvents: 'mouse',
+                }}
+                open={open}
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+                }}
+                transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+                }}
+                onClose={handlePopoverClose}
+                disableRestoreFocus
+            >
+                <Typography
+                sx={{ p: 1 }}
+                // onMouseEnter={handlePopoverOpen}
+                onMouseLeave={handlePopoverClose}
+                >
+                    <button onclick={handleAuth} onClick={()=>{setOpenLogin(true)}}>
+                        <p>{user? 'Sign Out': 'Sign In'}</p>
+                    </button>
+                </Typography>
+            </Popover>
+            </div>
+        );
+    }
+
 
     return (
         <div className="header__container">
@@ -71,11 +135,7 @@ function Header() {
                 </div>
                 {/* nav items */}
                 <div className="header__nav">
-                    <div className="header__option" onClick={handleAuth}>
-                        <span className="header__optionLineOne">Hello {user?`${name}`:'Guest'}</span>
-                        <button className="header__optionLineTwo header__sigIin__button" onClick={()=>{setOpenLogin(true)}}>{user? 'Sign Out': 'Sign In'} </button>
-                        {openLogin && !user && <Login closeLogin={setOpenLogin} />}
-                    </div>
+                    {GuestLogin()}
                     <div className="header__option">
                         <span className="header__optionLineOne">Returns</span>
                         <span className="header__optionLineTwo">& Orders</span>

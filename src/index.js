@@ -1,9 +1,12 @@
+import './index.css';
+
+import reducer, {initialState} from './Reducers/reducer'
+
+import App from './App/App';
+import PayStack from 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App/App';
 import {StateProvider} from './Reducers/StateProvider'
-import reducer, {initialState} from './Reducers/reducer'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -9,7 +9,7 @@ import React from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout','Upload Profile picture'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout','Upload Profile picture','Verify bank account'];
 
 function Profile() {
     const [anchorElUser, setAnchorElUser] = React.useState(null);

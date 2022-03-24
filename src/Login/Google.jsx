@@ -1,14 +1,9 @@
-import React, {useState} from 'react';
 import './Login.css';
-import {Link,useNavigate} from 'react-router-dom';
 
-import {signInWithPopup, GoogleAuthProvider} from "firebase/auth";
-import {auth,update,provider} from './firebase';
-import ErrorOutlinedIcon from '@mui/icons-material/ErrorOutlined';
-import {useStateValue} from '../Reducers/StateProvider';
+import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+import {auth, provider} from './firebase';
 
-
- //google login
+//google login
 function googleSignUp(){
 
     auth.languageCode = 'it'
@@ -23,6 +18,7 @@ function googleSignUp(){
         // The signed-in user info.
         const user = result.user;
         // ...
+        console.log(`Token : ${token}, User : ${user} `)
     }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -32,6 +28,7 @@ function googleSignUp(){
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
+        console.log(`Error : ${errorCode} >>> ${errorMessage} ; Email : ${email}; Credential : ${credential}`)
     });
 }
 

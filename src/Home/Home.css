@@ -35,22 +35,3 @@
 
 /* home grid styles */
 
-.home__categories__grid__container{
-    display: -ms-grid;
-    display:grid;
-    -ms-grid-template-columns: auto auto auto auto;
-    -ms-grid-auto-flow: auto;
-    grid-template-columns: auto auto auto auto;
-    grid-auto-rows:max-content;
-    height:50vh;
-    margin-top:-250px;
-    padding-left: 10px;
-    justify-content:space-around;
-}
-.grid__item{
-    text-align:center;
-    width:25vw;
-    margin:10px;
-    background-color:#000;
-    height:25vh
-}

@@ -11,6 +11,7 @@ import Header from '../Header/Header';
 import Home from '../Home/Home';
 import Login from '../Login/Login';
 import Orders from '../Orders/Orders';
+import PayStack from '../Paystack/PayStack2';
 import Payment from '../Payment/Payment';
 import {auth} from '../Login/firebase';
 import {loadStripe} from '@stripe/stripe-js';
@@ -50,7 +51,14 @@ function App() {
     <Router>
         <div className="app">
           <Routes>
-            <Route path='/orders' element={
+          <Route path="/paystack" element={
+              <div>
+                <Header />
+                <PayStack />
+                <Footer />
+              </div>
+            }/>
+            <Route path="/orders" element={
               <div>
                 <Header />
                 <Orders/>

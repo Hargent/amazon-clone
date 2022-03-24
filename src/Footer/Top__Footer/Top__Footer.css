@@ -10,7 +10,7 @@
     margin: 5em;
 }
 .Top__Footer__content > p{
-    flex-basis: 25vw;
+    flex:1 1 25%;
     color:#fff;
     padding-top:20px;
 }

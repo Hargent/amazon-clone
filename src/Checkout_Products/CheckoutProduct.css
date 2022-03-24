@@ -1,19 +1,19 @@
 /* Product styles */
 .checkoutProduct{
     display:flex;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:1.25rem;
+    margin-bottom:1.25rem;
 }
 .checkoutProduct__info{
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 .checkoutProduct__price{
-    margin-bottom:5px;
+    margin-bottom:0.3125rem;
 }
 
 .checkoutProduct__image{
-    height: 180px;
-    width: 180px;
+    height: 11.25rem;
+    width: 11.25rem;
     object-fit: contain;
 }
 .checkoutProduct__info > button{
@@ -31,7 +31,7 @@
     display:flex;
 }
 .checkoutProduct__title{
-    font-size:17px;
+    font-size:1.0625rem;
     font-weight: 800;
 }
 

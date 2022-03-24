@@ -5,16 +5,16 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 5px;
     background-color:black;
-    top:90px;
-    left:100px;
-    height:300px;
-    width:50px
+    top:5.625rem;
+    left:6.25rem;
+    height:18.75rem;
+    width:3.125rem
 }
 .all__button{
     cursor:pointer;
 }
 .all span{
-    height:25px;
+    height:1.5625rem;
     font-weight:400;
 }
 .css-11c4yfq-MuiButtonBase-root-MuiButton-root {

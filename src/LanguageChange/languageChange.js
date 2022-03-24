@@ -24,14 +24,14 @@ function LanguageChange() {
             aria-owns={open ? 'mouse-over-popover' : undefined}
             aria-haspopup="true"
             onMouseEnter={handlePopoverOpen}
-            onMouseLeave={handlePopoverClose}
+            
         >
             <IconFlagUS/><ArrowDropDownIcon/>
         </Typography>
         <Popover
             id="mouse-over-popover"
             sx={{
-            pointerEvents: 'none',
+            pointerEvents: 'mouse',
             }}
             open={open}
             anchorEl={anchorEl}
@@ -46,7 +46,10 @@ function LanguageChange() {
             onClose={handlePopoverClose}
             disableRestoreFocus
         >
-            <Typography sx={{ p: 1 }}>I use Popover.</Typography>
+            <Typography 
+            sx={{ p: 1 }}
+            onMouseLeave={handlePopoverClose}
+            >I use Popover.</Typography>
         </Popover>
         </div>
     );

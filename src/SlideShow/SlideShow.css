@@ -1,5 +1,8 @@
 .home__slide__img{
-    height:100vh;
+    -ms-mask-image:linear-gradient(to bottom, rgba(0,0,0,1)80%, rgba(0,0,0,0));
+    mask-image:linear-gradient(to bottom, rgba(0,0,0,1)80%, rgba(0,0,0,0));
+    -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,1)80%, rgba(0,0,0,0));
+    -moz-mask-image:linear-gradient(to bottom, rgba(0,0,0,1)80%, rgba(0,0,0,0));
 }
 .d-block{
     width: 100%;
@@ -11,8 +14,11 @@
     display:none
 }
 .carousel.carousel-slider .control-arrow{
-    height:30%
+    height:20%
 }
 .dot{
     background:orange !important;
+}
+.control-dots{
+    display:none
 }
