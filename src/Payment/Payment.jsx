@@ -3,17 +3,20 @@ import './Payment.css';
 import {CardElement, useElements, useStripe} from '@stripe/react-stripe-js';
 import{Link, useNavigate} from 'react-router-dom';
 import React,{useEffect, useState} from 'react';
-import {addDoc, collection, doc, updateDoc} from 'firebase/firestore';
+import {doc, updateDoc} from 'firebase/firestore';
 
 import CheckoutProduct from '../Checkout_Products/CheckoutProduct';
 import CurrencyFormat from 'react-currency-format';
+import PayStack from '../Paystack/PayStack2';
 import axios from '../Axios/Axios';
 import {db} from '../Login/firebase';
 import {getBasketTotal} from '../Reducers/reducer';
 import {useStateValue} from '../Reducers/StateProvider';
 
+
 function Payment() {
     const [{basket,user},dispatch] = useStateValue();
+    const [openPayStack, setOpenPayStack] = useState(false);
 
     const stripe = useStripe();
     const elements = useElements();
@@ -22,8 +25,16 @@ function Payment() {
     const [succeeded, setSucceeded] = useState(false);
     const [processing, setProcessing] = useState('');
     const [clientSecret, setClientSecret] = useState('');
+    const [converter, setConverter]=useState('');
+
     const navigate = useNavigate();
 
+
+
+    const access_key = '46cd3214c15e37996166c2ff6e6dbc41';
+    const currencies = 'NGN'
+    const source = 'USD'
+    const format = 1
 
     useEffect (()=>{
 
@@ -34,10 +45,20 @@ function Payment() {
                 url:`/payments/create?total=${getBasketTotal(basket) * 100}`
             });
             setClientSecret(response.data.clientSecret)
+            
         }
+        const getConverter = async ()=> {
+            const res = await axios({
+                method:'get',
+                url: 'http://apilayer.net/api/live?access_key=' + access_key +'&currency=' + currencies + '&source=' + source + '&format' + format,   
+            }) 
+            setConverter(res.data.quotes.USDNGN)
+            console.log("DONE BOSS,Converter is :", converter ) 
+        }
+        getConverter()
         getClientSecret();
-
-    },[basket])
+        
+    },[basket, converter])
     console.log('The secret is >>>',clientSecret)
 
     const handleSubmit = async (event) => {
@@ -54,7 +75,7 @@ function Payment() {
             const data = {
                     
                 }
-            // console.log(data.amount)
+            console.log('stripe response : ',data.amount,payload)
             const orderRef = doc(db,"orders",user?.uid)
             updateDoc(orderRef,{
                 basket:basket,
@@ -85,11 +106,12 @@ function Payment() {
         setError(event.error?event.error.message:'');
     }
 
+    const value = getBasketTotal(basket) * parseInt(converter)
     return (
         <div className="payment">
             <div className="payment__container">
                 <h1>
-                    Checkout (<Link to="/checkout"><a>{basket?.length} items</a></Link>)
+                    Checkout (<Link to="/checkout"><p>{basket?.length} items</p></Link>)
                 </h1>
                 <div className="payment__section">
                     <div className="payment__title">
@@ -123,30 +145,58 @@ function Payment() {
                         <h3>Payment Method</h3>
                     </div>
                     <div className="payment__details">
-                        <form onSubmit={handleSubmit}>
-                            <CardElement onChange={handleChange}/>
-                            <div className="payment__priceContainer">
+                        <div>
+                            <form onSubmit={handleSubmit}>
+                                <CardElement onChange={handleChange}/>
+                                <div className="payment__priceContainer">
+                                <CurrencyFormat
+                                    renderText={(value) => (
+                                        <>
+                                            <h3>
+                                                Order Total:{value}
+                                            </h3>
+                                        </>
+                                    )}
+                                    decimalScale={2}
+                                    value={getBasketTotal(basket)}
+                                    displayType={"text"}
+                                    thousandSeparator={true}
+                                    prefix={"$"}
+                                />
+                                <button disabled={processing || disabled || succeeded}>
+                                    <span>{processing?<p>Processing</p>:"PAY NOW"}</span>
+                                </button>
+                                </div>
+                                {/* error catching and logginng */}
+                                {error&&<div>{error}</div>}
+                            </form>
+                        </div>
+                        <div>
+                            <h2>OR</h2>
+                        </div>
+                        <div>
+                            <button className="PayStack__btn" onClick={()=>{setOpenPayStack(true)}}>
+                                <div>
+                                    <img className="paystack__image" src="../image/paystack.ico" alt="Paystack"/>
+                                </div>
+                            </button>
+                            {openPayStack && <PayStack closePayStack={setOpenPayStack} value={value}/>}
                             <CurrencyFormat
                                 renderText={(value) => (
                                     <>
                                         <h3>
-                                            Order Total:{value}
+                                            Order Total: {value}
                                         </h3>
                                     </>
                                 )}
                                 decimalScale={2}
-                                value={getBasketTotal(basket)}
+                                value={getBasketTotal(basket)* parseInt(converter)}
                                 displayType={"text"}
                                 thousandSeparator={true}
-                                prefix={"$"}
+                                prefix={" NGN "}
                             />
-                            <button disabled={processing || disabled || succeeded}>
-                                <span>{processing?<p>Processing</p>:"PAY NOW"}</span>
-                            </button>
-                            </div>
-                            {/* error catching and logginng */}
-                            {error&&<div>{error}</div>}
-                        </form>
+                            <p>Note: Pay-Stack accepts payment in NGN</p>
+                        </div>
                     </div>
                 </div>
             </div>

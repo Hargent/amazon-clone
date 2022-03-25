@@ -1,4 +1,4 @@
-import React, {useState,useEffect}from 'react';
+import React, {useState,useEffect, useRef}from 'react';
 import './Deliver.css';
 import {useStateValue} from '../Reducers/StateProvider';
 import DeliveryCountry from './ChooseCountry';
@@ -10,6 +10,7 @@ function Delivery({closeDelivery}){
 
 	const [Location, setLocation] = useState(false);
 	const [{country},dispatch] = useStateValue();
+	const modalRef = useRef();
 
 	const isLocation = ()=> {
 		if (!Location){
@@ -25,11 +26,22 @@ function Delivery({closeDelivery}){
 	}else{
 		place = name
 	}
+	useEffect(()=>{
+		const handlerOne = (event)=>{
+			if(!modalRef.current.contains(event.target)){
+				closeDelivery(false)
+			}
+		};
+		document.addEventListener("mousedown",handlerOne)
+		return ()=>{
+			document.removeEventListener("mousedown",handlerOne)
+		}
+	})
 
 
 return(
-<div className="delivery__overlay">
-	<div className="delivery__container outer__container">
+<div className="delivery__overlay" >
+	<div className="delivery__container outer__container" ref={modalRef}>
 		<div className="delivery__container inner">
 		<div className="delivery__container__title">
 			<p >Choose your location</p> 
@@ -56,7 +68,6 @@ return(
 		</div>
 		</div>
 	</div>
-		<button className="delivery__container__cancel" onClick={()=>{closeDelivery(false)}}>X</button>
 </div>
 )
 };

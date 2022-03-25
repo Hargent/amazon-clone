@@ -16,10 +16,10 @@
 .home__category__item{
     flex:1 1 18.75rem;
     text-align:center;
-    color:#fff;
+    color:#000;
     /* width:20vw; */
     margin:10px;
-    background-color:#000;
+    background-color:#fff;
     height:18.75rem;
     border-radius:10px;
 }
@@ -28,6 +28,13 @@
     text-align:center;
     border-bottom:1px solid #fff
 }
-.home__category__image{
-    
+.row1__b__container,
+.row1__c__container{
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   grid-template-rows:1fr 1fr;
+    gap :10px;
+    width:25%;
+}
+.row1__b__container img{
 }

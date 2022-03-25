@@ -1,3 +1,4 @@
 .MuiFab-root:hover{
+    transition:all,1s;
     background-color:orange !important;
 }

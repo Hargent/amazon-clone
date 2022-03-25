@@ -187,26 +187,36 @@
     text-align:center;
     vertical-align:middle;
 }
-.google__signIn__btn:hover{
-    color:#f0c14b;
-    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
+.other__login__gateways{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    flex:1,1, 30px;
+    justify-content:space-around;
+    align-items:center;
+    margin-top:20px;
+}
+.google__sign__in__btn{
+    height:30px;
+    width:30px;
+    cursor:pointer;
+    margin-right:20px;
+    margin-bottom:0;
+    transition: ease-out 0.2s;
 }
 .twitter__signIn__btn{
-    padding:10px;
-    border-radius: 5px;
-    width:100%;
+    width:30px;
     height: 30px;
-    border:1px solid;
-    margin-top:10px;
-    border-color:darkgrey;
     cursor:pointer;
-    margin-bottom: 10px;
-    text-align:center;
-    vertical-align:middle;
+    margin-right:20px;
+    transition: ease-out 0.2s;
+    box-shadow: inset 0 0 0 0 rgb(230, 222, 222)
 }
-.twitter__signIn__btn:hover{
-    color:#f0c14b;
-    box-shadow:1px 1px 1px 1px rgba(70, 55, 55, 0.548)
+.google__sign__in__btn:hover,
+.twitter__signIn__btn:hover {
+    box-shadow: inset 30px 0 0 0 rgb(235, 229, 229)
+    /* animation:hover 0.7s 2 ease-in-out ;: */
 }
+
 
 

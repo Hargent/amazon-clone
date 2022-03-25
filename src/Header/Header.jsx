@@ -25,8 +25,7 @@ function Header() {
     const [openAll, setOpenAll] = useState(false)
     const [{basket,user,country},dispatch] = useStateValue();
     const [name, setName] = useState(null) ;
-    console.log('Your country is',country)
-
+    
     useEffect(()=>{
         setName(user?.displayName);
     },[user?.displayName])
