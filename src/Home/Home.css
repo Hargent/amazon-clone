@@ -1,37 +1,58 @@
 /* Home page styles */
-.home{
-    display:flex;
-    justify-content:center;
-    margin-left:auto;
-    margin-right:auto;
-    max-width:1500px
+.home {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
 }
-/*.home__row{
-    display:flex;
-    z-index: 1;
-    margin-top:-200px; 
-    margin-left:5px;
-    margin-right:5px;
+.home__row {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  z-index: 1;
+  /* margin-top: -200px; */
+  margin-left: 5px;
+  margin-right: 5px;
 }
-.home__column{
-    background:none;
+.home__column {
+  background: red;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.home__img{
-    width: 100%;
-    height: 500vh;
-    z-index: -1;
-    margin-bottom:-20%;
-    -ms-mask-image:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    mask-image:linear-gradient(to bottom, rgba(0,0,0,1)50%, rgba(0,0,0,0));
-    -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    -moz-mask-image:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    
+.home__img {
+  width: 100%;
+  height: 500vh;
+  z-index: -1;
+  margin-bottom: -20%;
+  -ms-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  -moz-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
 }
-.home__row__1{
-    background:none;
-    margin:20px;
-} */
+.home__row__1 {
+  /* background: blue; */
+
+  /* margin: 20px; */
+}
 
 /* home grid styles */
-
