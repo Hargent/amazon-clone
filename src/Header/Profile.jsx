@@ -26,7 +26,7 @@ function Profile() {
         <Box sx={{ flexGrow: 0, alignSelf: 'right'}}>
                 <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar alt="Remy Sharp" src={require("C:/PROJECTS/amazon-clone/src/Image/Amazon.png")} />
+                    <Avatar alt="Remy Sharp" src={require("../Image/Amazon.png")} />
                 </IconButton>
                 </Tooltip>
                 <Menu
